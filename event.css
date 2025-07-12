@@ -144,7 +144,11 @@ nav ul li a:hover {
     display: flex;
     justify-content: space-between;
 }
-
+.logo-container h1{
+    font-size: 1rem;
+    align-self: center;
+    
+}
 .logo {
     height: 50px;
     margin-right: 10px;

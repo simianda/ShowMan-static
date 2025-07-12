@@ -24,7 +24,7 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 2rem;
+    font-size:1rem;
     flex-shrink: 0;
 }
 
@@ -609,6 +609,86 @@ footer a:hover {
     .feature {
         width: 120px; /* Further reduce width for smaller screens */
     }
+}
 
-    
+
+
+/* 2. Header Fix for Responsiveness on Small Screens (like iPhone SE 375px) */
+@media (max-width: 480px) {
+
+  .hero {
+    padding: 3rem 1rem;
+    text-align: center;
+  }
+
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .our_services1,
+  .our_services2,
+  .our_services3 {
+    width: 100%;
+    font-size: 1rem;
+    padding: 10px;
+    margin-bottom: 1rem;
+  }
+
+  .testimonial-container {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .testimonial {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .event-card img {
+    height: 30vh;
+    object-fit: cover;
+  }
+
+  .features {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .feature {
+    width: 90%;
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .hero {
+    padding: 4rem 1.5rem;
+    text-align: center;
+  }
+
+  .hero h2 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .testimonial-container {
+    grid-template-columns: 1fr;
+  }
+
+  .features {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .feature {
+    width: 45%;
+  }
 }
