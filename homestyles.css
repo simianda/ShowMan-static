@@ -115,6 +115,9 @@ header h1 {
 
 /* RESPONSIVE MENU */
 @media (max-width: 768px) {
+    *{
+        max-width: 600px;
+    }
   .nav_sec nav ul {
     position: fixed;
     top: 0;
@@ -141,6 +144,9 @@ header h1 {
 
   .nav-backdrop.active {
     display: block;
+  }
+  .events-grid{
+    margin-right: 30rem;
   }
 }
 
