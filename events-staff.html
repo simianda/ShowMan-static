@@ -1,0 +1,50 @@
+<!-- Manage Events Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showman House - Manage Events</title>
+    <link rel="stylesheet" href="staff.css">
+</head>
+<body>
+    <header>
+        <h1>Showman House - Manage Events</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="events-staff.html">Manage Events</a></li>
+                <li><a href="employees.html">Manage Employees</a></li>
+                <li><a href="home.html" id="logout-link">Logout</a></li>
+
+                <!-- Logout Link with JavaScript -->
+
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Assign Staff to Events</h2>
+            <form id="assign-staff-form">
+                <div class="form-group">
+                    <label for="event-selection">Select Event:</label>
+                    <select id="event-selection" name="event-selection" required>
+                        <option value="">-- Select Event --</option>
+                        <option value="birthday-party">Birthday Party (April 12, 2025)</option>
+                        <option value="corporate-event">Corporate Team Event (May 20, 2025)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="num-staff">Number of Staff Required:</label>
+                    <input type="number" id="num-staff" name="num-staff" min="1" placeholder="Enter number of staff" required>
+                </div>
+
+                <button type="submit" class="submit-button">Assign Staff</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

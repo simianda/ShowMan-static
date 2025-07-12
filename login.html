@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showman House - Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+      <!-- Header -->
+    <header>
+        <div class="backdrop"></div>
+        <div class="logo-container">
+            <img src="logo.png" alt="Showman House Logo" class="logo">
+            <h1>Showman House</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="featured-events.html">Events</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="index.html ">Logout</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>Login</h2>
+            <form id="login-form">
+                <!-- Role Selection -->
+                <div class="form-group">
+                    <label for="role">Login As:</label>
+                    <select id="role" name="role" required>
+                        <option value="">-- Select Role --</option>
+                        <option value="customer">Customer</option>
+                        <option value="staff">Staff</option>
+                    </select>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <!-- Password -->
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="submit-button">Login</button>
+            </form>
+
+            <p>Don't have an account? <a href="register.html">Register here</a>.</p>
+        </section>
+    </main>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Collect form data
+            const role = document.getElementById('role').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Validate role selection
+            if (!role || role === '') {
+                return alert('Please select a role.');
+            }
+
+            // Staff Login Override (Hardcoded for testing)
+            const validStaffEmail = 'staff@example.com';
+            const validStaffPassword = 'password123';
+
+            if (role === 'staff') {
+                if (email === validStaffEmail && password === validStaffPassword) {
+                    alert('Staff login successful!');
+                    window.location.href = 'staff-dashboard.html'; // Staff dashboard
+                } else {
+                    alert('Invalid staff credentials. Please try again.');
+                }
+            } else if (role === 'customer') {
+                // For customer login (replace with real authentication later)
+                alert('Customer login successful!');
+                window.location.href = 'dashboard.html'; // Customer dashboard
+            }
+        });
+    </script>
+
+      <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburger");
+        const nav = document.querySelector("nav ul");
+        const backdrop = document.querySelector(".backdrop");
+
+    hamburger.addEventListener("click", () =>{
+      nav.classList.toggle("active");
+      backdrop.classList.toggle("active");
+    })
+
+    backdrop.addEventListener("click", () => {
+      nav.classList.remove("active");
+      backdrop.classList.remove("active");
+    })
+
+  })
+
+  
+</script>
+
+
+</body>
+</html>
