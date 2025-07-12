@@ -652,8 +652,9 @@ footer a:hover {
   }
 
   .testimonial-container {
-    grid-template-columns: 1fr;
-    padding: 1rem;
+        display: flex;
+        flex-direction: column;
+
   }
 
   .testimonial {
@@ -696,9 +697,6 @@ footer a:hover {
     font-size: 1.2rem;
   }
 
-  .testimonial-container {
-    grid-template-columns: 1fr;
-  }
 
   .features {
     flex-direction: row;
