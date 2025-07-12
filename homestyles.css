@@ -145,9 +145,7 @@ header h1 {
   .nav-backdrop.active {
     display: block;
   }
-  .events-grid{
-    margin-right: 30rem;
-  }
+
 }
 
 /* Hero Section */
@@ -400,6 +398,7 @@ header h1 {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 60px;
     height: max-content;
+   
 }
 
 .event-card {
@@ -615,6 +614,14 @@ footer a:hover {
     .feature {
         width: 120px; /* Further reduce width for smaller screens */
     }
+    .events-grid{
+        justify-content: center;
+        align-items: center;
+        margin-right: 3rem;
+    }
+    .event-card{
+        width: 20vw;
+    }
 }
 
 
@@ -652,6 +659,11 @@ footer a:hover {
   .testimonial {
     flex-direction: column;
     gap: 10px;
+  }
+  .events-grid{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
   }
 
   .event-card img {
@@ -697,4 +709,12 @@ footer a:hover {
   .feature {
     width: 45%;
   }
+
+      .events-grid{
+        display: flex;
+        flex-direction: column;
+      
+  }
+  
+
 }
